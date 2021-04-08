@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+     {{> header}}
+   <form action="company" method="post" enctype="application/x-www-form-urlencoded">
+  <label for="browser">Choose your Company:</label>
+  <input list="browsers" name="company_name" id="browser">
+  <datalist id="browsers">
+      {{#each response.data}}
+    <option value="{{this.companyName}}">
+       {{/each}}
+  </datalist>
+  <button type="submit" >Submit</button>
+</form>
+    </div>
+
+    {{> footer}}
+</body>
+</html>
