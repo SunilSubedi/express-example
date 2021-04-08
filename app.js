@@ -46,12 +46,7 @@ hbs.registerPartials(__dirname + '/views/partials');
      }
  })
 app.get('/',(req,res) => {
-   res.render('index.hbs',{
-       company : {
-               name:'Agricultural Development bank',
-              symbol:'adbl',
-       },
-   });
+   res.render('index.hbs');
 });
 
 app.get('/company', (req,res) => {
