@@ -10,7 +10,7 @@ var argv = yargs.help().argv
 
 
 var app = express();
-
+const port = process.env.PORT || 5000;
 
 app.set('view engine', 'hbs');
 // for parsing application/json
@@ -86,4 +86,6 @@ app.post('/company', (req,res) => {
 
 //app.use(express.static('public'));
 
-app.listen(5000);
+app.listen(port,() => {
+    console.log(`Server is on port ${port}`);
+});
