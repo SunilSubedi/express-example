@@ -79,6 +79,10 @@ app.post('/company', (req,res) => {
      });
 })
 
+app.get('/about', (req,res) => {
+    res.render('about.hbs');
+})
+
 //app.use(express.static('public'));
 
 app.listen(port,() => {
